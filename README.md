@@ -45,6 +45,6 @@ This project implements a common API that can be used like this
                                  17, 18, 19, 20, 21, 22, 23, 24,
                                  25, 26, 27, 28, 29, 30, 31, 32);
   auto blend_result = blend256(a, b, mask);
-
+```
 
 The implementation makes use of http://boostorg.github.io/hana
