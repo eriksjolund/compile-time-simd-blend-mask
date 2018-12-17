@@ -1,6 +1,6 @@
 # compile-time-simd-blend-mask
 Compile-time blend masks that unifies _mm256_blend_epi8, _mm256_blend_epi16, _mm256_blend_epi32
-by using the C++ library boost::hana
+by using the C++ library [boost::hana](http://boostorg.github.io/hana)
 
 ## Introduction
 
