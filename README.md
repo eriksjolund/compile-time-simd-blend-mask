@@ -4,7 +4,7 @@ by using the C++ library boost::hana
 
 ## Introduction
 
-The intrinsics function 
+The intrinsics functions
 
 * __m256i _mm256_blendv_epi8(__m256i v1, __m256i v2, __m256i mask)
 * __m256i _mm256_blend_epi16(__m256i a, __m256i b, const int imm8)
