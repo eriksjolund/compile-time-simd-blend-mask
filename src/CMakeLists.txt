@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.11)
-project(minitesthana LANGUAGES CXX)
+project(compile-time-simd-blend-mask LANGUAGES CXX)
 
 find_package(Hana)
 
