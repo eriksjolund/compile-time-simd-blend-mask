@@ -19,10 +19,10 @@ This project implements a common API that can be used like this
 
 ```C++
     auto mask = hana::make_tuple(
-      hana::true_c,  hana::false_c,
+      hana::false_c,  hana::false_c,
       hana::false_c, hana::false_c, 
-      hana::false_c, hana::false_c, 
-      hana::false_c, hana::false_c, 
+      hana::true_c, hana::true_c, 
+      hana::true_c, hana::true_c, 
 
       hana::false_c, hana::false_c, 
       hana::false_c, hana::false_c, 
@@ -34,10 +34,10 @@ This project implements a common API that can be used like this
       hana::false_c, hana::false_c, 
       hana::false_c, hana::false_c, 
 
-      hana::false_c, hana::false_c, 
-      hana::false_c, hana::false_c, 
-      hana::false_c, hana::false_c, 
-      hana::false_c, hana::false_c
+      hana::true_c, hana::true_c, 
+      hana::true_c, hana::true_c, 
+      hana::true_c, hana::true_c, 
+      hana::true_c, hana::true_c
     );
     __m256i a = _mm256_set1_epi8(0);
     __m256i b = _mm256_setr_epi8( 1,  2,  3,  4,  5,  6,  7,  8,
@@ -46,7 +46,8 @@ This project implements a common API that can be used like this
                                  25, 26, 27, 28, 29, 30, 31, 32);
   auto blend_result = blend256(a, b, mask);
 ```
-At compile-time the mask will be analyzed and the fastest possible intrinsics function will be chosen.
+At compile-time the mask will be analyzed and the fastest possible intrinsics function will be chosen (in this case 
+`             _mm256_blend_epi32()`).
 
  If the mask allows it  _mm256_blend_epi32() will be used.
  Otherwise  if the  mask allows it  _mm256_blend_epi16() will be used.
