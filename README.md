@@ -59,4 +59,5 @@ The file
 [src/blend256.h](src/blend256.h)
 
 contains the implementation of the blend256() function.
-The implementation makes use of http://boostorg.github.io/hana
+The implementation makes use of the C++ library [boost::hana](http://boostorg.github.io/hana).
+
