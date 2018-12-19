@@ -49,9 +49,9 @@ This project implements a common API that can be used like this
 At compile-time the mask will be analyzed and the fastest possible intrinsics function will be chosen (in this case 
 `             _mm256_blend_epi32()`).
 
- If the mask allows it  _mm256_blend_epi32() will be used.
- Otherwise  if the  mask allows it  _mm256_blend_epi16() will be used.
- Otherwise _mm256_blend_epi8() will be used.
+ If the mask allows it  `_mm256_blend_epi32()` will be used.
+ Otherwise  if the  mask allows it  `_mm256_blend_epi16()` will be used.
+ Otherwise `_mm256_blend_epi8()` will be used.
  
 # Implementation details
 
