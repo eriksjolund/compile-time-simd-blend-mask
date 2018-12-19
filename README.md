@@ -11,7 +11,7 @@ The intrinsics functions
 * [__m256i _mm256_blend_epi32(__m256i a, __m256i b, const int imm8)](https://software.intel.com/en-us/cpp-compiler-developer-guide-and-reference-mm-blend-epi32-mm256-blend-epi16-32)
 
 serve similar purpose, but they take different arguments. The first function encodes the blend mask in the SIMD vector **__256i**, 
-but the two latter encode the blend mask in an **int**.
+but the two latter encode the blend mask in an **int**. The value of such an **int** needs to be known at compile-time (unlike the **__m256i** mask for the first function).
 
 ## Example
 
